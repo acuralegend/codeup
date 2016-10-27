@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous"
+    >
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/weather.js"></script>
+
+
+         <!-- Google Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playball|Open+Sans+Condensed:300,700" />
+
+  
+
+ <!--  <style>
+    #weather-box {
+        background-color: purple;
+        border-radius: 50%;
+        width:  150px
+        height: 150px
+        margin: 0 auto;
+    }
+    </style>
+                                -->
+
+
 </head>
-    
-        <script>
-        function b() {
-$.get("http://api.openweathermap.org/data/2.5/weather", {
-    APPID: "841738b63489bc8b86b86531ec928213",
-    q:     "San Antonio, TX",
-    units: "imperial"
-
-}).done(function(data) {
-    //console.log(data);
-    $('#weather').html('and the temperature is: ' + data.main.temp);
-});
-}
-        </script>
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <body>
-    <p id="weather">Here's the weather:</p>
 
-    <button onclick="b()">Submit</button>
+
+    <div class="container">
+    <h1>The 3day Forecast in SA is:</h1>
+    <div class="col-md-6-align-left">
+    </div>
+    <div class="col-md-6-align-left">
+        <div id="weather"></div>
+        
+    </div>
+</div>
+
+
     </body>
 </html>
