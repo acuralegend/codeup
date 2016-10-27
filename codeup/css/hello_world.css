@@ -1,0 +1,66 @@
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+#animate-area {
+    width: 560px;
+    height: 400px;
+    background-image: url("../img/money_fire.jpg");
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+
+    animation: animatedBackground 3s linear infinite;
+}
+
+/* Change the color of the headers (h2's for now) */
+h2 {
+    text-decoration: underline;
+}
+
+/* Change the background Color */
+body {
+    background: #CD853F;
+    color: #f93a44;
+    font-family: "Marker Felt", "Arial Black";
+}
+/* Modify the List style */
+
+ul {
+list-style: square;
+}
+
+/* unvisited link */
+a:link {
+    color: purple;
+}
+
+/* visited link */
+a:visited {
+    color: yellow;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    text-decoration : none;
+}
+
+/* selected link */
+a:active {
+    color: orange;
+}
+h1 {
+    color: Salmon;
+}
+
+
+table {
+        padding: 9px;
+        font-size: 17px;
+    }
+    tr, td {
+    padding: 9px;
+    font-size: 17px;
+    }
+
+}

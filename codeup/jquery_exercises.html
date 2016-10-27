@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example jQuery Page</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script>
+    var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65,13";
+
+$(document).keydown(function(e) {
+
+  kkeys.push( e.keyCode );
+
+  if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+
+    $(document).unbind('keydown',arguments.callee);
+    
+    // do something awesome
+    alert('You gained 30 lives!!!');
+  
+  }
+
+});
+</script>
+</head>
+<body>
+    <h1>Example Page</h1>
+    <div class="important">
+        <h3>NOTICE</h3>
+        <p>This is an important message!</p>
+    </div>
+    <div class="not-important">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
+    </div>
+    <p class="important">This is also very important.</p>
+<ul>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+</ul>
+    <form method="POST" action="http://requestb.in/1mptk6g1">
+        <label for="username">Username</label>
+        <input id="username" type="text" name="username">
+        <br>
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email">
+        <br>
+
+        <label for="password">password</label>
+        <input id="password" type="password" name="password">
+        <br>
+
+        <label for="confirm_password">confirm password</label>
+        <input id="confirm_password" type="password" name="confirm_password">
+
+<p><button type=""submit">Submit</button> | <button type="reset" value="Reset">Clear Values</button></p>
+    </form>
+
+</body>
+</html>

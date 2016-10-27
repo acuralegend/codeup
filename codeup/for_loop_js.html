@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Signika+Negative:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css"
+      rel="stylesheet"/>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+"use strict" ;
+
+
+ /* My code (kinda works)
+
+ for(var n = 1; n <= 9; n++) {
+
+     var repeatNumber = n.toString() ;
+     n.toString()
+     console.log(n + repeatNumber .repeat(repeatNumber));
+ }
+                                                        */
+for(var n = 1; n <=10; n++) {
+    if (n == 10) {
+        console.log("0".repeat(n))         }
+    else {
+        console.log(n.toString().repeat(n));
+    }
+}
+
+
+/* MY CODE (DOESN't WORK)
+var randNumber = Math.floor(Math.random() * 10);
+var increment = 1;
+for (randNumber; increment >=10; increment++ );{
+        console.log(randNumber + "x" + increment + "=" + (randNumber * increment));
+    }
+*/
+    var random = Math.floor(Math.random() * 10) +1 ;
+    for(var i = 1; i <= 10; i++) {
+        var result = random * i;
+        console.log(random + "x" + i + "=" + result);
+    }
+
+    for(var i =1; i <= 10; i++) {
+    var rand = Math.ceil(Math.random() * 180) + 20;
+    if(rand % 2 == 0){
+        console.log(rand + " is even");
+    }else{
+        console.log(rand + " is odd");
+    }
+}
+
+for(var i = 100; i <= 5; i -=5){
+    console.log(i);
+}
+
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

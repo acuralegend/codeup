@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example jQuery Page</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/jquery-3.1.1.js"></script>
+<td>Fernandono</td>
+</tr>
+</table>
+<button class="btn btn-danger">Delete</button>
+</div>
+<script>
+    console.log($("title").html());
+    $("#title").html("New text");
+
+    $("input[type=checkbox]").on("click",function () {
+        $(this).parent().parent().addClass("danger");
+} else {
+    $(this).parent().parent().removeClass("danger");
+}
+
+})
+
+</script>
+</body>
+</html>

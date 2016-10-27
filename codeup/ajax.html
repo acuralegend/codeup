@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX</title>
+    <body>
+    	<div id ="placeholder"></div>
+
+    	<script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    	<script>
+    	(function($) {
+    			$.ajax("friends.json", {
+    				type: "GET",
+    				dataType: "json"
+    			}).done(function (friends) {
+    				
+    				var table = "<table>";
+    				friends.forEach(function (friend) {
+   					table += "<tr><td>" + friend.name+ "</td><td>" + friend.books + "</td></tr>"
+						});
+    				table += "</table>";
+
+    				$("#placeholder").html(table);
+
+    				//console.log(friends);
+    			});
+    	})(jQuery);
+    	</script>

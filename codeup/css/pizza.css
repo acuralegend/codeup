@@ -1,0 +1,10 @@
+.help-block {
+    font-size: 8px;
+    font-style: italic;
+
+}
+
+.form-group{
+    width:100%;
+    box-sizing:border-box;
+}

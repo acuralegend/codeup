@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parks List</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        "use strict";
+
+        $(document).ready(function() {
+            $('#national-parks-toggle').click(function() {
+                $('#national-parks').hide();
+            });
+            $('#state-parks-texas-toggle').click(function() {
+                $('#state-parks-texas').hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Parks List</h1>
+    <h3 id="national-parks-toggle">National Parks</h3>
+    <ul id="national-parks">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3 id="state-parks-texas-toggle">State Parks of Texas</h3>
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+</body>
+</html>

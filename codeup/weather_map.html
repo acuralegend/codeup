@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+    
+        <script>
+        function b() {
+$.get("http://api.openweathermap.org/data/2.5/weather", {
+    APPID: "841738b63489bc8b86b86531ec928213",
+    q:     "San Antonio, TX",
+    units: "imperial"
+
+}).done(function(data) {
+    //console.log(data);
+    $('#weather').html('and the temperature is: ' + data.main.temp);
+});
+}
+        </script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<body>
+    <p id="weather">Here's the weather:</p>
+
+    <button onclick="b()">Submit</button>
+    </body>
+</html>

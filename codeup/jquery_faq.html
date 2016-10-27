@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parks List</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <h1>Parks List</h1>
+    <h3>National Parks 1</h3>
+    <ul id="national-parks1">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3>State Parks of Texas</h3>
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+    <h3>Nation Parks 2</h3>
+    <ul id="national-parks2">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+
+
+        <script>
+            $("ul").each(function () {
+                $(this).children().first().css("font-weight", "bold")
+});
+
+            $('li').click(function () {
+                $(this).parent().addClass('invisible');
+
+});
+            $('h3').click(function() {
+                $(this).next().removeClass('invisible');
+
+
+            });
+        
+    </script>
+</body>
+</html>

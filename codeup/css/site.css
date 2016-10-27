@@ -1,0 +1,42 @@
+/*
+Text and Link Styles
+*/
+
+.fancy-header {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/* unvisited link */
+a:link {
+    color: purple;
+}
+
+/* visited link */
+a:visited {
+    color: yellow;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+ text-decoration : none;	
+}
+
+/* selected link */
+a:active {
+    color: orange;
+}
+h1 {
+    color: Salmon;
+}
+
+/*
+Text and Link Styles
+*/
+
+.fancy-header {
+    color: blue;
+    text-decoration: underline;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <title>My First HTML Form</title>
+</head>
+<body>
+<main id="container">
+<h2 name="User Login">User Login</h2>
+<form method="POST" action="http://requestb.in/1mptk6g1">
+    <p>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text">
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+</form>
+<hr>
+
+
+<h2 name="User Login">Compose E-mail </h2>
+<form method="POST" action="http://requestb.in/1mptk6g1">
+    <input type="text" id="From" name="From" value="" placeholder="From">
+    <br>
+    <input type="text" id="To" name="To" value="" placeholder="To">
+    <br>
+    <input type="text" id="Subject" name="Subject" value="" placeholder="Subject">
+    <br>
+    <textarea id="Email_Body" name="Email_Body" rows="12" cols="95"></textarea>
+    <br>
+    <button type="submit">Send</button>
+    <br>
+    <input type="checkbox" id="Save_Copy" name="Save_Copy" value="yes" checked>
+    <label for="Save_Copy">Save a copy of this message in my 'Sent Items' folder</label>
+</form>
+<hr>
+<h2 name="Test">Multiple Choice Test</h2>
+
+<form method="POST" action="http://requestb.in/1mptk6g1">
+
+    <p>Who is the best rapper?
+    <label>
+        <input type="radio" name="q1" value="2pac">
+        2pac
+    </label>
+    <label>
+        <input type="radio" name="q1" value="Biggie">
+        Biggie
+    </label>
+    <label>
+        <input type="radio" name="q1" value="Pimp C">
+        Pimp C
+    </label>
+
+</form>
+</p>
+
+<p>What is the best Operating System?
+    <label>
+        <input type="radio" name="q2" value="Windows">
+        Windows
+    </label>
+    <label>
+        <input type="radio" name="q2" value="Linux">
+        Linux
+    </label>
+    <label>
+        <input type="radio" name="q2" value="Unix">
+        Unix
+    </label>
+    <label>
+        <input type="radio" name="q1" value="OS/2 Warp">
+        OS/2 Warp
+    </label>
+    <p><button type=""submit">Submit</button></p>
+    </form>
+    </p>
+
+
+
+<form method="POST" action="http://requestb.in/1mptk6g1">
+
+<p>Who are all the crazy people?</p>
+<label><input type="checkbox" id="crazy1" name="crazy[]" value="Kanye West"> Kanye West</label>
+<label><input type="checkbox" id="crazy2" name="crazy[]" value="Margot Kitter"> Margot Kitter</label>
+<label><input type="checkbox" id="crazy3" name="crazy[]" value="Tony Romo"> Tony Romo</label>
+    <label><input type="checkbox" id="crazy4" name="crazy[]" value="Jerry Jones"> Tony Romo</label>
+
+
+
+    <br>
+    <button type=""submit">Submit</button>
+</form>
+<hr>
+<p><h2 name=""Select_Test">Select Testing</h2>
+<form method="POST" action="http://requestb.in/1mptk6g1">
+<p>
+
+    <label for="basketball">Do you like basketball? </label>
+    <select id="basketball" name="basketball">
+        <option value="1">Yes</option>
+        <option value="0">No</option><br>
+    </select>
+    <button type=""submit">Submit</button>
+
+</p>
+</form>
+<hr>
+<form method="POST" action="http://requestb.in/1mptk6g1">
+<p><label for="os">What is the best Operating System?</label>
+        <select id="os" name="os []" multiple>
+        <option value="1">Unix</option>
+        <option value="2">Windows</option>
+        <option value="3">Linux</option>
+        <option value="4">Android</option>
+        <br>
+        </select>
+        <button type="submit">Submit</button>
+        </p>
+    </form>
+    </main>
+<script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+
+/* Default Page Styles */
+body * {
+    font-family: arial, helvetica;
+    text-decoration: none;
+}
+
+/* A little Livliness */
+.patriotic span:nth-of-type(even) {
+        color:      blue;
+        font-size:  x-small;
+}
+
+.patriotic span:nth-of-type(odd) {
+        color:      red;
+        font-size:  xx-small;
+
+}
+
+/* Navbar */
+#navbar {
+    display:            inline;
+    top:                0px;
+    left:               0px;
+    font-size:          xx-small;
+}
+
+/* Link Styles */
+
+a:visited {color: darkred;}
+a:hover {color: orangered;}
+a:active {color: navajowhite;}
+a:link {color: teal;}
+
+html {
+    font-size:  100.01%;
+}
+
+
+@media (min-width: 750px) {
+    body {
+        color: black;
+        background-color: white;
+        margin: 20px 0px 0px 0px;
+        padding-left: 40px;
+        padding-bottom: 0px;
+
+    }
+
+    h5 {
+        font-size: 60%;
+        line-height: 60%;
+    }
+
+    input, select {
+        clear:              both;
+        width:              auto;
+        padding:            0;
+        margin:             0;
+        height:             22px;
+        -moz-box-sizing:    border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    button {
+        margin-left: 401px;
+    }
+
+
+    /* Form Box */
+    #main {
+        background-image:   url(../img/sroot/sroot-head.png);
+        background-repeat: repeat-y;
+        position:           relative;
+        float:              inherit;
+        font-size:          12px;
+        padding-left:       120px;
+    }
+
+    #main h1 {
+        font-family: arial, helvetica;
+        font-size: 60%;
+        line-height: 60%;
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        padding-left: 13.2%;
+        padding-top: 10px;
+    }
+
+    #main h5 {
+        font-size: 60%;
+        line-height: 60%;
+        font-family: arial, helvetica;
+        color: white;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        padding-left: 5px;
+    }
+
+    #main-article {
+        border-style: solid;
+        border-color: #77AF00;
+        float: left;
+        font-size: 12px;
+        width: 57.5%;
+        word-wrap: break-word;
+        color: black;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    #rightmenu {
+        background-color: black;
+        float: right;
+        width: 15%;
+        padding: 10px 70px 30px 0px;
+        margin: 3px 3px 30px 10px;
+    }
+
+    #rightmenu h1 {
+        font-family: "Comic Sans MS";
+        color: black;
+        font-style: strong;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+        padding-left: 5px;
+        float: right;
+
+    }
+
+    #rightmenu h5 {
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+    }
+
+    /* Footer Styles */
+    #footer {
+        clear: both;
+        float: bottom;
+        text-align: center;
+        font-family: "Courier";
+        position: bottom;
+        font-size: 6px;
+        padding-top: 1px;
+        padding-bottom: 30px;
+        width: 59.58%;
+
+    }
+
+    /* Footer Link */
+    #footer a {
+        color: white;
+    }
+}
+

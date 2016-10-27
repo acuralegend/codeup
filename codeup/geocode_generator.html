@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div to hold map -->
+    <div id="map-canvas"></div>
+
+    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnlFlntzsDEoTdatWPrM4Vs0g6TcCSK38"></script>
+
+    <!-- Script to show address on map -->
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 25,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.423727,
+                lng: -98.492237
+            }
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+// Create lat and long for our marker position
+var bigas = { lat: 29.423727, lng: -98.492237 };
+
+// Add the marker to our existing map
+var marker = new google.maps.Marker({
+    position: bigas,
+    map: map
+});
+
+    })();
+    </script>
+</body>

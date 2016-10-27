@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animate</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #btn-animate {
+            margin: 15px;
+        }
+
+        #animate-box {
+            background-color: #000033;
+            height: 250px;
+            margin: 15px;
+            position: relative;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <button id="btn-move">Move It</button>
+    <button id="btn-scale">Scale It</button>
+    <button id="btn-hide">Hide It</button>
+    <button id="btn-show">Show It</button>
+    <button id="btn-all">Animate All</button>
+</p>
+
+<div id="animate-box"></div>
+
+<script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+<script>
+$(document).ready(function () {
+    "use strict";
+    function animateBox(animationOptions) {
+        $("#animate-box").animate(animationOptions, 1000);
+    }
+    $("#btn-move").on("click", function () {
+        animateBox({left: "+=-100px"});
+    });
+    $("#btn-scale").on("click", function () {
+        animateBox({width: "+=125px"});
+    });
+    $("#btn-hide").on("click", function () {
+        animateBox({opacity: "0"});
+    });
+    $("#btn-show").on("click", function () {
+        animateBox({opacity: "1"});
+    });
+    $("#btn-all").on("click", function () {
+        $("#animate-box").animate({
+            left: "+=-100px",
+            width: "+=125px"
+        }, 1000).animate({
+            opacity: "0"
+        }, 1000).animate({
+            opacity: "1",
+            left: "+=100px",
+            width: "+=-125px"
+        }, 1000);
+    });
+});
+</script>
+</body>
+</html>

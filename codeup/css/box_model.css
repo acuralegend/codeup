@@ -1,0 +1,30 @@
+/* selector for id="sixtwenty" */
+/* #selector-sixtwenty {
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
+}
+table {
+    color: "Red";
+    padding: 9px;
+    font-size: 17px;
+}
+tr, td {
+    padding: 9px;
+    font-size: 17px;
+}
+*/
+/* * {
+    border: 1px solid red !important;
+}
+*/
+
+body {
+    background-color: peru;
+}
+table {
+    width: 200px;
+    border: 10px solid #99c;
+    padding: 20px;
+    margin: 20px;
+}

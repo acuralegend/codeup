@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX - WeatherAPI</title>
+    <body>
+    	<div id ="placeholder"></div>
+
+    	<script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    	<script>
+$.get("http://api.openweathermap.org/data/2.5/weather", {
+    APPID: "841738b63489bc8b86b86531ec928213",
+    id:     4726206,
+    units: "imperial"
+}).done(function(data) {
+    console.log(data);
+});
+</script>
+</body>
+</html>

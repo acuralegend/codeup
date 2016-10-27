@@ -1,0 +1,107 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom:  0;
+    border-radius:  0;
+    width:  95%;
+    background-color: black;
+}
+
+.navbar-header {
+    position: relitive;
+    background-color: black;
+}
+
+
+
+.container-fluid {
+    position:       relative;
+    padding-right:  0px;
+
+}
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+            height: 720px;
+            width: 100%;
+            background-color: white;
+}
+
+.navbar-right {
+    position:           relative;
+    float:              right;
+    text-align:         right;
+}
+
+
+
+/* Set 40% height */
+.col-sm-2.sidenav.text-left {
+
+    padding-top: 10px;
+    height: 40%;
+    max-height: 40%
+    position: relative;
+    float: left;
+
+}
+
+
+}
+.navbar-right{
+    position:   relative;
+    float:      right;
+    text-align: right;
+    background-color: #00aced;
+}
+.twitter-timeline {
+    display: inline-block;
+    height: 100px !important;
+    width: 100px !important;
+    position: fixed;
+    float: left;
+
+}
+/* Set alabaster background color, black text and some padding */
+footer {
+    background-color: #F2F0E6;
+    color: black;
+    padding: 5px;
+    width: 95%;
+}
+.container-fluid.text-right{
+    background-image:   url(../img/homer_head.png);
+    background-repeat:  no-repeat;
+    position:           relative;
+    float:              right;
+    margin-left:        120px;
+    height:             72px;
+    width:              200px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+
+    }
+    .row.content {
+        height:auto;
+
+    }
+}
+.container {
+    width:          95%;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h1 .icon:first-child {
+    margin-right: 0.5em;
+}
+
+h1 .icon:last-child {
+    margin-left: 0.5em;
+}
