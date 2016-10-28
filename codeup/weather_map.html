@@ -1,47 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link
-        rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-        crossorigin="anonymous"
-    >
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="js/weather.js"></script>
+    <meta charset="UTF-8">
+    <title>Weather Forecast jQuery/AJAX</title>
+    <link rel ="stylesheet" 
+          href="css/weather.css"
+          >
+          <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Signika+Negative:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnlFlntzsDEoTdatWPrM4Vs0g6TcCSK38"></script>
+
+<script>
+    var boxes = $('.boxcontent');
+    var h1 = $('h1');
+    $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+        APPID: "841738b63489bc8b86b86531ec928213",
+        q:     "San Antonio, TX",
+        cnt: 3,
+        units: "imperial"
+    
 
 
-         <!-- Google Fonts -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playball|Open+Sans+Condensed:300,700" />
 
-  
+    }).done(function(data)                              {
+            var days = data.list;
 
- <!--  <style>
-    #weather-box {
-        background-color: purple;
-        border-radius: 50%;
-        width:  150px
-        height: 150px
-        margin: 0 auto;
-    }
-    </style>
-                                -->
+        
 
 
+        $(h1).html(data.city.name);
+                    for(i = 0; i < data.list.length; i++){
+            
+            var day = days[i];
+            var daytemps = day.temp;
+            var dayweather = day.weather[0].main;
+            var weathericon = day.weather[0].icon;
+            
+
+                //Do boxes and bring in images!
+
+            $(boxes[i]).append("<p>High: " + daytemps.max + "</p>");
+            $(boxes[i]).append("<p>Low: " + daytemps.min + "</p>");
+            $(boxes[i]).append("<img src='http://openweathermap.org/img/w/" + weathericon + ".png'>");
+            $(boxes[i]).append("<p>Weather: " + dayweather + "</p>");
+            
+                //Output to console.log, the temps of the days @ Max Level!!!
+             console.log(daytemps.max);
+            }
+});
+
+    var mapOptions = {
+        
+
+
+        // Set the zoom level
+        zoom: 14,
+       
+
+       //Make this the San Antonio Area. Geotag is needed.
+        center: {
+            lat:  29.426791,
+            lng: -98.489602
+        }
+};
+    
+
+
+    // Render the map
+                    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                        var marker = new google.maps.Marker({
+            draggable: true,
+            position: mapOptions.center,
+            map: map,
+            title: "Map Name Goes here"
+        
+
+});
+    
+
+            //Drag the location marker????
+    google.maps.event.addListener(marker, 'dragend', function(event) {
+        document.getElementById("lat").value = event.latLng.lat();
+        document.getElementById("lon").value = event.latLng.lng();
+        var latitude = parseFloat($('#lat').val());
+        var longitude = parseFloat($('#lon').val());
+        $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+            APPID: "841738b63489bc8b86b86531ec928213",
+            lat: latitude,
+            lon: longitude,
+            cnt: 3,
+            units: "imperial"
+
+                }).done(function(data)              {
+                        var days = data.list;
+                        console.log(days);
+            
+
+
+            $(h1).html(data.city.name);
+            $(boxes).html('');
+            for(i = 0; i < data.list.length; i++){
+                            var day = days[i];
+                            var daytemps = day.temp;
+                            var dayweather = day.weather[0].main;
+                            var weathericon = day.weather[0].icon;
+                            console.log(weathericon);
+                
+                            //Draw the actual boxes and populate them!!!!!!
+
+                $(boxes[i]).append("<p>High: " + daytemps.max + "</p>");
+                $(boxes[i]).append("<p>Low: " + daytemps.min + "</p>");
+                $(boxes[i]).append("<img src='http://openweathermap.org/img/w/" + weathericon + ".png'>");
+                $(boxes[i]).append("<p>Weather: " + dayweather + "</p>");
+
+
+            }
+        })
+    });
+</script>
 </head>
 <body>
+<input id='lat' type="text">
+<input id='lon' type="text">
+<button>Submit</button>
 
-
-    <div class="container">
-    <h1>The 3day Forecast in SA is:</h1>
-    <div class="col-md-6-align-left">
-    </div>
-    <div class="col-md-6-align-left">
-        <div id="weather"></div>
-        
-    </div>
+<div id="container">
+    <div class="box" id="one"><h2>Today's forecast is</h2><div class="boxcontent"></div></div>
+    <div class="box" id="two"><h2>Tomorrow's forecast is</h2><div class="boxcontent"></div></div>
+    <div class="box" id="three"><h2>3rd Day forecast is</h2><div class="boxcontent"></div></div>
 </div>
+<div id="map-canvas"></div>
 
 
-    </body>
+
+
+</body>
 </html>
